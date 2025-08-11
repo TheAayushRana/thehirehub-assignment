@@ -62,12 +62,20 @@ const ChatbotWidget = () => {
   };
 
   const handleSendMessage = () => {
+    if (inputMessage.trim() === '') return;
+    
     const newUserMessage = { role: 'user', content: inputMessage };
     setChatMessages([...chatMessages, newUserMessage]);
     setInputMessage('');
     setTimeout(() => {
       scrollToBottom();
     }, 100);
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleSendMessage();
+    }
   };
 
   const scrollToBottom = () => {
@@ -121,9 +129,10 @@ const ChatbotWidget = () => {
           <input
             value={inputMessage}
             onChange={handleInputChange}
+            onKeyPress={handleKeyPress}
             type='text'
             placeholder='Type your questions here...'
-            className='relative outline-1 active:outline-2 border-none w-full h-10 rounded-xl border-2 border-gray-200 px-3 py-2'
+            className='text-sm md:text-base relative outline-1 active:outline-2 border-none w-full h-10 rounded-xl border-2 border-gray-200 px-3 py-2'
           />
           <button
             className='text-primary p-2 rounded-sm absolute right-2 text-sm cursor-pointer hover:bg-gray-100 font-bold'
