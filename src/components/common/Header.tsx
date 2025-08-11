@@ -20,7 +20,7 @@ const Header = () => {
           </div>
           <h3 className='text-xl font-light'>
             {' '}
-            HireHub.<span className='text-secondary-light font-bold'>AI</span>
+            HireHub.<span className='text-secondary font-medium'>AI</span>
           </h3>
         </div>
         <div className='hidden md:relative'>
