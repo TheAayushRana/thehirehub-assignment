@@ -136,7 +136,7 @@ export const columns: ColumnDef<ActiveJob>[] = [
     ),
     cell: ({ row }) => {
       return (
-        <div className='text-right font-medium'>{row.getValue('status')}</div>
+        <div className='text-right font-medium capitalize'>{row.getValue('status')}</div>
       );
     },
   },
