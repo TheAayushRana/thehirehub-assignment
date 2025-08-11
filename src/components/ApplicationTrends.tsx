@@ -26,7 +26,7 @@ const data = [
 const ApplicationTrends = () => {
   return (
     <div className='flex flex-col gap-4 p-5'>
-      <h2 className='text-lg font-bold'>Application Tracker Chart </h2>
+      <h2 className='text-lg uppercase font-normal'>Application Tracker Chart </h2>
       <div style={{ width: '100%', height: 350 }}>
         <ResponsiveContainer>
           <LineChart data={data}>

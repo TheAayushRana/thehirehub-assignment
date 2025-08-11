@@ -35,7 +35,7 @@ const ApplicationBreakdown = () => {
 
   return (
     <div className='flex flex-col gap-4 p-5 justify-between'>
-      <h2 className='text-lg font-bold'>Application Breakdown</h2>
+      <h2 className='text-lg uppercase font-normal'>Application Breakdown</h2>
       <div style={{ height: 350 }}>
         <ResponsiveContainer>
           <PieChart>
@@ -43,18 +43,18 @@ const ApplicationBreakdown = () => {
               data={cleanData}
               dataKey='value'
               nameKey='name'
-              cx='50%' // Center X
-              cy='50%' // Center Y
-              innerRadius={70} // Donut hole size
-              outerRadius={120} // Outer circle size
-              paddingAngle={2} // Space between slices
-              labelLine={false} // Hide line to labels
-              label={renderLabel} // Show labels with % on each slice
+              cx='50%'
+              cy='50%'
+              innerRadius={70}
+              outerRadius={120}
+              paddingAngle={2}
+              labelLine={false}
+              label={renderLabel}
             >
-              {cleanData.map((entry, i) => (
+              {cleanData.map((entry, index) => (
                 <Cell
-                  key={`slice-${entry.name}`}
-                  fill={COLORS[i % COLORS.length]}
+                  key={index}
+                  fill={COLORS[index % COLORS.length]}
                 />
               ))}
             </Pie>

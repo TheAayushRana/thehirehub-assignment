@@ -11,23 +11,27 @@ export default function Home() {
   const metricsCards = [
     {
       title: 'Active Job Posts',
-      value: 100,
+      value: 500,
       icon: <CiFlag1 />,
+      bgColor: 'white'
     },
     {
       title: 'Total Candidates',
-      value: 100,
+      value: 1200,
       icon: <TiUserAddOutline />,
+      bgColor: 'white'
     },
     {
       title: 'Recommended by AiRA',
-      value: 100,
+      value: 200,
       icon: <FaRegStar />,
+      bgColor: 'linear-gradient(127deg,rgba(140, 250, 250, 1) 22%, rgba(180, 84, 240, 0.95) 52%);',
     },
     {
       title: 'AiRA Top Rankers',
-      value: 100,
+      value: 300,
       icon: <IoTrophyOutline />,
+      bgColor: 'linear-gradient(127deg,rgba(140, 250, 250, 1) 22%, rgba(180, 84, 240, 0.95) 52%);',
     },
   ];
 
@@ -35,15 +39,16 @@ export default function Home() {
     <main className='space-y-4'>
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
         {metricsCards.map((card, index) => {
-          const { title, icon, value } = card;
+          const { title, icon, value, bgColor } = card;
           return (
             <div
               key={index}
-              className='flex flex-col gap-2 border border-gray-200 rounded-[8px] p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:cursor-pointer'
+              className='flex flex-col gap-2 border border-gray-200 rounded-[8px] p-4 shadow-md hover:shadow-lg transition-all duration-300 hover:cursor-pointer hover:scale-105'
+              style={{ background: bgColor }}
             >
               <div className='flex items-center gap-2'>
                 <span className='text-primary text-2xl'>{icon}</span>
-                <span className='text-lg font-bold'>{title}</span>
+                <span className='text-base font-normal uppercase'>{title}</span>
               </div>
               <div className='flex items-center gap-2'>
                 <span className='text-primary text-3xl'>{value}</span>

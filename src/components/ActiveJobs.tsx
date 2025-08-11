@@ -227,7 +227,8 @@ const ActiveJobsTable = () => {
   });
 
   return (
-    <div className='w-full bg-white'>
+    <div className='w-full bg-white p-5'>
+      <h2 className='text-lg uppercase font-normal mb-5'>Active Jobs</h2>
       <div className='overflow-x-auto overflow-hidden rounded-md border'>
         <Table className='min-w-full'>
           <TableHeader>
