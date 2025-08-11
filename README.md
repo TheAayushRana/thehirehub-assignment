@@ -30,6 +30,11 @@ This is an assignment from TheHireHub.AI - a comprehensive job application dashb
 - [x] Application Breakdown Chart
 - [x] Chatbot Widget
 
+### Screenshots
+<img width="1440" height="759" alt="Screenshot 2025-08-11 at 2 48 08 PM" src="https://github.com/user-attachments/assets/38da47ba-5c0d-4121-b202-c580afb496e5" />
+<img width="1437" height="762" alt="Screenshot 2025-08-11 at 2 48 31 PM" src="https://github.com/user-attachments/assets/be013f49-08f4-4049-9b99-8e375341c955" />
+
+
 ### Deployment
 
 The project is deployed on Vercel: https://thehirehub-assignment-git-main-aayush-ranas-projects-a0989178.vercel.app?_vercel_share=T02rIeLLTMMfGj7VF8sj8MXg25pNeieb
